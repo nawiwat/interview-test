@@ -13,3 +13,4 @@ After completing the chosen problems, please write tests for each of them.
 Project structure can be designed as desired, but please write a README explaining how to use the program and how to run the tests.
 
 You can write the explanations below in any language you prefer, both in the code and in the README.
+//test
