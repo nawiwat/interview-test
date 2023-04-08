@@ -73,6 +73,17 @@ func main() {
 		fmt.Scan(&K)
 
 		ans := functions.Solution(A,K)
-		fmt.Print("Output: ",ans)
+		if ans != nil {
+			fmt.Print("Output: [")
+			for i := 0; i < len(ans); i++ {
+				fmt.Printf("%d", ans[i])
+				if i < len(ans)-1 {
+					fmt.Printf(", ")
+				}
+			}
+			fmt.Print("]")
+		} else {
+			fmt.Print("Output: no answer")
+		}
 	}
 }
