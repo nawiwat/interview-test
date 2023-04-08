@@ -7,6 +7,7 @@ import (
 )
 
 //1.interger to roman
+
 func IntToRoman(num int) string {
 
 	//roman digit
@@ -93,23 +94,33 @@ func IntToRoman(num int) string {
 	return ""
 }
 
-//2.simple bank system
-// type Bank struct {
+//3 two sum
 
-// }
+func TwoSum(nums []int, target int) []int {
+    m := make(map[int]int)
+    for i, num := range nums {
+        a := target - num
+        if j, ok := m[a]; ok {
+            return []int{j, i}
+        }
+        m[num] = i
+    }
+    return nil
+}
 
-// func Constructor(balance []int64) Bank {
-
-// }
-
-// func (this *Bank) Transfer(account1 int, account2 int, money int64) bool {
-
-// }
-
-// func (this *Bank) Deposit(account int, money int64) bool {
-
-// }
-
-// func (this *Bank) Withdraw(account int, money int64) bool {
-
-// }
+//5 array rotation
+func Solution(A []int, K int) []int {
+    N := len(A)
+    if N == 0 {
+        return A
+    }
+    K = K % N
+    if K == 0 {
+        return A
+    }
+    B := make([]int, N)
+    for i := 0; i < N; i++ {
+        B[(i+K)%N] = A[i]
+    }
+    return B
+}
